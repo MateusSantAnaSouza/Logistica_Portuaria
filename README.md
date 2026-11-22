@@ -11,6 +11,24 @@ Aplicação de terminal em Python para gerenciar a operação básica de um port
 | Pilha de contêineres | Pilha (LIFO) | `list` com `append()` e `pop()` |
 | Rotas entre portos | Árvore | Dicionários aninhados |
 
+## Justificativa da escolha das estruturas de dados
+
+**Lista – Gerenciamento da frota de veículos**
+
+A lista foi escolhida para armazenar os veículos cadastrados no sistema, pois permite manter vários registros em uma única estrutura e realizar operações de cadastro, consulta, atualização e exclusão. Sua utilização facilita o gerenciamento da frota, permitindo percorrer os registros e localizar veículos por meio de seus identificadores (IDs).
+
+**Fila – Gerenciamento dos caminhões**
+
+A fila foi escolhida para representar os caminhões que aguardam atendimento no porto, pois esse processo precisa respeitar a ordem de chegada. Sua implementação segue o princípio FIFO (First In, First Out), garantindo que o primeiro caminhão cadastrado seja o primeiro a ser atendido.
+
+**Pilha – Gerenciamento dos contêineres**
+
+A pilha foi escolhida para representar o armazenamento e a retirada dos contêineres, seguindo o princípio LIFO (Last In, First Out). Dessa forma, o último contêiner inserido é o primeiro a ser retirado, permitindo simular o funcionamento de uma estrutura de empilhamento.
+
+**Árvore – Gerenciamento das rotas entre portos**
+
+A árvore foi escolhida porque permite representar relações hierárquicas entre os portos e suas rotas. Sua estrutura possibilita que um porto possua diferentes portos conectados, formando ramificações e permitindo organizar os caminhos de maneira hierárquica. No projeto, essa estrutura foi implementada utilizando dicionários aninhados.
+
 ## Requisitos
 
 - Python 3.x
@@ -123,3 +141,4 @@ O projeto está em um único arquivo, `main.py`, organizado em blocos:
 - Usar `collections.deque` no lugar de `queue.Queue` para facilitar listagem e exclusão na fila
 - Separar o código em módulos (`frota.py`, `fila.py`, `pilha.py`, `rotas.py`)
 - Trocar o formato `|` por JSON ou CSV
+
