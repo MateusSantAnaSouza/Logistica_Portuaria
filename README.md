@@ -141,4 +141,3 @@ O projeto está em um único arquivo, `main.py`, organizado em blocos:
 - Usar `collections.deque` no lugar de `queue.Queue` para facilitar listagem e exclusão na fila
 - Separar o código em módulos (`frota.py`, `fila.py`, `pilha.py`, `rotas.py`)
 - Trocar o formato `|` por JSON ou CSV
-
